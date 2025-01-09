@@ -87,7 +87,7 @@ Structure
 
 Acknowledgments
 Django for its powerful web framework
-Bootstrap and CSS for easy styling
+Bootstrap and CSS for easy styling,
 All contributors and open-source libraries used in this project
 
 ### Key Sections:
