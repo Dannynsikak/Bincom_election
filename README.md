@@ -15,7 +15,7 @@ This is a Django-based web application to manage and display polling unit result
 
     - Python 3.x
     - Django 3.x or later
-    - SQLite or any other database of your choice (SQLite is the default)
+    - SQL or any other database of your choice
 
 ### Steps to Get Started
 
