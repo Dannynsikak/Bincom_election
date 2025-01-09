@@ -21,8 +21,8 @@ This is a Django-based web application to manage and display polling unit result
 
     1. **Clone the repository**:
 
-git clone https://github.com/yourusername/polling-unit-results.git
-cd polling-unit-results
+git clone https://github.com/Dannynsikak/Bincom_election.git
+cd Bincom_election
 Create a virtual environment:
 
     python3 -m venv .venv
@@ -49,25 +49,25 @@ Create a virtual environment:
 
 Structure
 
-Bincom_election/
-│
-├── bincom_election/ # Django project folder
-│ ├── migrations/ # Database migrations
-│ ├── **init**.py
-│ ├── settings.py # Project settings
-│ ├── urls.py # URL routing
-│ └── wsgi.py
-│
-├── templates/ # HTML templates
-│ ├── lga_results.html # View for LGA results
-│ ├── polling_unit_results.html # View for Polling Unit results
-│ └── add_results.html # Form for adding polling unit results
-│
-├── manage.py # Django management script
-├── requirements.txt # Project dependencies
-└── bincom_test.sql
+    Bincom_election/
+    │
+    ├── bincom_election/ # Django project folder
+    │ ├── migrations/ # Database migrations
+    │ ├── **init**.py
+    │ ├── settings.py # Project settings
+    │ ├── urls.py # URL routing
+    │ └── wsgi.py
+    │
+    ├── templates/ # HTML templates
+    │ ├── lga_results.html # View for LGA results
+    │ ├── polling_unit_results.html # View for Polling Unit results
+    │ └── add_results.html # Form for adding polling unit results
+    │
+    ├── manage.py # Django management script
+    ├── requirements.txt # Project dependencies
+    └── bincom_test.sql
 
-URLs
+    URLs
 
     /: Home page
     /add_results/: Page to add polling unit results.
