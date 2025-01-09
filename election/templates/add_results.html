@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Polling Unit Results</title>
+    <style>
+      /* Basic Reset */
+      body,
+      h1,
+      form,
+      input,
+      button {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+      }
+
+      label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+        display: inline-block;
+        color: #555;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+
+      button[type="button"],
+      button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+      }
+
+      button[type="button"]:hover,
+      button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      /* Styling for the add party button */
+      button[type="button"] {
+        background-color: #6c757d;
+        margin-top: 10px;
+      }
+
+      button[type="button"]:hover {
+        background-color: #495057;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Spacing for dynamically added inputs */
+      .party-input {
+        margin-bottom: 10px;
+      }
+    </style>
+    <script>
+      function addPartyScoreField() {
+        const partyScoresContainer = document.getElementById(
+          "partyScoresContainer"
+        );
+        const newField = document.createElement("input");
+        newField.setAttribute("type", "text");
+        newField.setAttribute("name", "party_scores");
+        newField.setAttribute("placeholder", "party:score");
+        newField.classList.add("party-input"); // Add class for styling
+        partyScoresContainer.appendChild(newField);
+        partyScoresContainer.appendChild(document.createElement("br"));
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enter Polling Unit Results</h1>
+
+      <form method="POST">
+        {% csrf_token %}
+        <label for="polling_unit_id">Polling Unit ID:</label>
+        <input
+          type="text"
+          name="polling_unit_id"
+          title="Polling Unit ID"
+          placeholder="Enter Polling Unit ID"
+          required
+        /><br />
+
+        <label for="party_scores">Party Scores (format: party:score):</label>
+        <div id="partyScoresContainer">
+          <input
+            type="text"
+            name="party_scores"
+            placeholder="party:score"
+            required
+            class="party-input"
+          /><br />
+        </div>
+
+        <button type="button" onclick="addPartyScoreField()">
+          Add Another Party</button
+        ><br /><br />
+
+        <button type="submit">Submit Results</button>
+      </form>
+    </div>
+  </body>
+</html>
