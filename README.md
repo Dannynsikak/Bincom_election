@@ -76,7 +76,7 @@ Structure
     Technologies Used
     Backend: Django (Python)
     Frontend: HTML (with basic CSS for styling)
-    Database: SQLite (default, can be changed to PostgreSQL, MySQL, etc.)
+    Database: SQL (default, can be changed to PostgreSQL, etc.)
     Version Control: Git
     Contributing
     Fork the repository
