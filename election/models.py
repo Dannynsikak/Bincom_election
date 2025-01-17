@@ -101,8 +101,10 @@ class PollingUnit(models.Model):
 class States(models.Model):
     state_id = models.IntegerField(primary_key=True)
     state_name = models.CharField(max_length=50, null=False)
+    
     class Meta:
         db_table = 'states'
+
 class Ward(models.Model):
     uniqueid = models.IntegerField()
     ward_id = models.IntegerField()

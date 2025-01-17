@@ -38,4 +38,4 @@ def add_results(request):
     return render(request, 'add_results.html')
 
 def success(request):
-    return render(request, 'success.html')  # Make sure you have a success.html template
+    return render(request, 'success.html')
